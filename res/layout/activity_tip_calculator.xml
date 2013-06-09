@@ -15,7 +15,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="77dp"
-        android:onClick="calculateTip10"
+        android:onClick="calculateTip"
+        android:tag="10"
         android:text="@string/ten_percentage" />
 
     <Button
@@ -24,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button10"
         android:layout_centerHorizontal="true"
-        android:onClick="calculateTip15"
+        android:onClick="calculateTip"
+        android:tag="15"
         android:text="@string/fifteen_percentage" />
 
     <Button
@@ -34,9 +36,9 @@
         android:layout_alignBaseline="@+id/button15"
         android:layout_alignBottom="@+id/button15"
         android:layout_alignParentRight="true"
-        android:onClick="calculateTip20"
         android:layout_marginRight="21dp"
-        
+        android:onClick="calculateTip"
+        android:tag="20"
         android:text="@string/twenty_percentage" />
 
     <EditText

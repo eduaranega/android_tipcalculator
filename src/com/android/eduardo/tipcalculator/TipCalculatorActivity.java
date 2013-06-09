@@ -33,31 +33,21 @@ public class TipCalculatorActivity extends Activity {
 	    }
 	}
 	
-	private void calculateTip(View view, double percentage) {
+	public void calculateTip(View view) {
+		
+		double percentage = Double.parseDouble((String) view.getTag()) / 100;
 		
 		EditText etAmount = (EditText)findViewById(R.id.editAmount);
-		TextView etTip = (TextView)findViewById(R.id.textTip);
+		TextView tvTip = (TextView)findViewById(R.id.textTip);
 		
 		if (!isEmpty(etAmount)) {
 			double tip = percentage * Double.parseDouble(etAmount.getText().toString());
 			DecimalFormat df = new DecimalFormat("'$ '0.00");
-			etTip.setText(df.format(tip));	
+			tvTip.setText(df.format(tip));	
 		}
 		else {
-			etTip.setText("$ 0.00");	
+			tvTip.setText("$ 0.00");	
 		}
-	}
-
-	public void calculateTip10(View view) {
-		calculateTip(view,0.10);
-	}
-
-	public void calculateTip15(View view) {
-		calculateTip(view,0.15);
-	}
-	
-	public void calculateTip20(View view) {
-		calculateTip(view,0.20);
 	}
 	
 }
